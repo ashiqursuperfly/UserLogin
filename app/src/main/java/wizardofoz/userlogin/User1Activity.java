@@ -7,6 +7,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class User1Activity extends AppCompatActivity {
 
@@ -19,15 +20,43 @@ public class User1Activity extends AppCompatActivity {
         TextView textHyperLink = (TextView) findViewById(R.id.idlink1);
         textHyperLink.setMovementMethod(LinkMovementMethod.getInstance());
 
-        Button btBack=(Button)findViewById(R.id.backButton1);
+        Button btBack = (Button) findViewById(R.id.backButton1);
+
 
         btBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent MainIntent =new Intent(User1Activity.this,MainActivity.class);
+
+                Intent MainIntent = new Intent(User1Activity.this, MainActivity.class);
                 startActivity(MainIntent);
+                finish();
+
+
             }
         });
+
+
+    }
+    private static final int TIME_INTERVAL = 2500;
+    private long mBackPressed;
+
+    public void onBackPressed() {
+
+
+        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis())
+        {
+            Intent MainIntent = new Intent(User1Activity.this, MainActivity.class);
+            startActivity(MainIntent);
+            finish();
+
+            return;
+        }
+        else {
+            Toast.makeText(getBaseContext(), "Tap back button in order to LogOut", Toast.LENGTH_SHORT).show();
+
+        }
+
+        mBackPressed = System.currentTimeMillis();
 
 
     }

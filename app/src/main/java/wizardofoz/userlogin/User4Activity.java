@@ -7,6 +7,7 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class User4Activity extends AppCompatActivity {
 
@@ -22,11 +23,36 @@ public class User4Activity extends AppCompatActivity {
 
         btBack.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent MainIntent =new Intent(User4Activity.this,MainActivity.class);
+            public void onClick(View v)
+            {
+                Intent MainIntent = new Intent(User4Activity.this, MainActivity.class);
                 startActivity(MainIntent);
+                finish();
             }
         });
+
+
+    }
+    private static final int TIME_INTERVAL = 2500;
+    private long mBackPressed;
+
+    public void onBackPressed() {
+
+
+        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis())
+        {
+            Intent MainIntent = new Intent(User4Activity.this, MainActivity.class);
+            startActivity(MainIntent);
+            finish();
+
+            return;
+        }
+        else {
+            Toast.makeText(getBaseContext(), "Tap back button in order to LogOut", Toast.LENGTH_SHORT).show();
+
+        }
+
+        mBackPressed = System.currentTimeMillis();
 
 
     }
