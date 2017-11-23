@@ -1,0 +1,25 @@
+<resources>
+
+    <string name="app_name">UserLogin</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="name_ashiqur_rahman">Name: Ashiqur Rahman</string>
+    <string name="studentid_1505103">StudentID: 1505103</string>
+    <string name="blood_group_o">Blood Group: O+</string>
+    <string name="cell_01687226064">Cell:01687226064</string>
+    <string name="cell_01986408168">Cell:01986408168</string>
+    <string name="blood_group_a">Blood Group:A+</string>
+    <string name="_1605106">1605106</string>
+    <string name="muntaka_ibnath">Muntaka Ibnath</string>
+    <string name="blood_group_b">Blood Group:B+</string>
+    <string name="back">Log Out</string>
+    <string name="studentid_1605106">StudentID:1605106</string>
+    <string name="linktosite1"><a href="https://www.facebook.com/ashiqur.superfly">Visit FacebookID</a></string>
+    <string name="linktosite2"><a href="https://www.facebook.com/muntaka.ibnath.90">Visit FacebookID</a></string>
+    <string name="linktosite3"><a href="https://www.facebook.com/profile.php?id=100004913890714">Visit FacebookID</a></string>
+    <string name="linktosite4"><a href="https://www.facebook.com/shahrar.swapnil">Visit FacebookID</a></string>
+    <string name="name_doha_rahat">Name: Doha Rahat</string>
+    <string name="studentid_1605108">StudentID:1605108</string>
+    <string name="cell_01733189401">Cell:01733189401</string>
+
+</resources>
